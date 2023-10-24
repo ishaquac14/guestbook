@@ -20,4 +20,14 @@ Route::get('/', function () {
 
 Route::resource('/book', BookController::class);
 Route::get('/book/search', 'BookController@index');
+// Route::get('/end-page', 'EndController@index')->name('endpage');
+
+Route::get('/thanks', function () {
+    return view('thanks');
+})->name('thanks');
+
+
+// Route::get('/welcome', 'WelcomeController@index')->name('welcome');
+// Route::get('/end', 'EndController@index')->name('end');
+
 

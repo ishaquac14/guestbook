@@ -61,9 +61,9 @@ class BookController extends Controller
             'departemen' => $request->departemen,
             'tujuan_lokasi' => $request->tujuan_lokasi,
             'tujuan' => $request->tujuan,
-        ]);
+        ]);    
         
-        return redirect()->route('book.index')->with('success', 'Data Sukses Ditambahkan');
+        return redirect()->route('thanks')->with('success', 'Data Sukses Ditambahkan');
     }
     /**
      * Display the specified resource.

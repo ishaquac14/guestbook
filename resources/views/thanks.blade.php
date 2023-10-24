@@ -9,9 +9,9 @@
       </a>
     </header>
 
-      <div class="py-5 mt-5">
-        <h1 class="display-1">SELAMAT DATANG!</h1>
-        <a class="btn btn-primary mt-4" href="{{ route('book.create') }}">Isi Buku Tamu</a>
+      <div class="py-5 mt-5 text-center">
+        <h1 class="display-1">TERIMA KASIH!</h1>
+        {{-- <a class="btn btn-primary mt-4" href="{{ route('book.create') }}">Isi Buku Tamu</a> --}}
   </div>
     
 @endsection
