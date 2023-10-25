@@ -9,9 +9,13 @@
       </a>
     </header>
 
-      <div class="py-5 mt-5">
-        <h1 class="display-1">SELAMAT DATANG!</h1>
-        <a class="btn btn-primary mt-4" href="{{ route('book.create') }}">Isi Buku Tamu</a>
-  </div>
-    
+    <div class="py-5 mt-5 text-center">
+      <h1 class="display-1">SELAMAT DATANG!</h1>
+      <div class="d-flex justify-content-center">
+          <a class="btn btn-primary mt-4 mx-2" href="{{ route('book.create') }}">Buku Tamu</a>
+          <a class="btn btn-success mt-4 mx-2" href="{{ route('delivery.create') }}">Buku Delivery</a>
+      </div>
+    </div>
+  
+</div>
 @endsection

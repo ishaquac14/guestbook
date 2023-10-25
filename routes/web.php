@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\DeliveryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,10 @@ Route::get('/', function () {
 
 Route::resource('/book', BookController::class);
 Route::get('/book/search', 'BookController@index');
-// Route::get('/end-page', 'EndController@index')->name('endpage');
+
+Route::resource('/delivery', DeliveryController::class);
+Route::get('/delivery/search', 'DeliveryController@index');
+
 
 Route::get('/thanks', function () {
     return view('thanks');

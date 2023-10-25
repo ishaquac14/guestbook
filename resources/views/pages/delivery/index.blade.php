@@ -3,10 +3,8 @@
 @section('body')
 <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-5">
-            <a href="{{ route('welcome') }}">
-                <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
-            </a>              
-            <a href="{{ route('thanks') }}" class="btn btn-warning">Kembali</a>
+            <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
+            <a href="{{ route('thanks') }}" class="btn btn-success">Kembali</a>
         </div>
         <div class="col-md-3 offset-md-9 mb-4">
             <form action="/book" class="d-flex ml-auto mt-2" method="GET">
@@ -32,17 +30,17 @@
                 </tr>
             </thead>
             <tbody>
-                @if($books->count() > 0)
-                @foreach ($books as $book)
+                @if($deliverys->count() > 0)
+                @foreach ($deliverys as $delivery)
                 <tr class="table-light"> 
                     <td class="align-middle">{{ $loop->iteration }}</td>
-                    <td class="align-middle">{{ $book->nama }}</td>
-                    <td class="align-middle">{{ $book->asal_perusahaan }}</td>
-                    <td class="align-middle">{{ $book->departemen }}</td>
-                    <td class="align-middle">{{ $book->tujuan_lokasi }}</td>
+                    <td class="align-middle">{{ $delivery->nama }}</td>
+                    <td class="align-middle">{{ $delivery->asal_perusahaan }}</td>
+                    <td class="align-middle">{{ $delivery->departemen }}</td>
+                    <td class="align-middle">{{ $delivery->tujuan_lokasi }}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <a href="{{ route('book.show', $book->id) }}" class="btn btn-primary">Detail</a>
+                            <a href="{{ route('delivery.show', $delivery->id) }}" class="btn btn-primary">Detail</a>
                         </div>
                     </td>
                 </tr>
@@ -54,7 +52,7 @@
                 @endif
             </tbody>
         </table>
-        @include('layouts.pagination-book', ['books' => $books])
+        @include('layouts.pagination-delivery', ['deliverys' => $deliverys])
     </div>
 </div>
 @endsection

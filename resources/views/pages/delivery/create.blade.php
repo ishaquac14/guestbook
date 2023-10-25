@@ -7,7 +7,7 @@
             <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
         </a>
     </div>
-    <form action="{{ route('book.store') }}" method="POST">
+    <form action="{{ route('delivery.store') }}" method="POST">
         @csrf
         <div class="row d-flex flex-wrap">
             <div class="col-md-6 mt-4">
@@ -79,7 +79,7 @@
         <div class="row mt-4">
             <div class="col">
                 <div class="d-grid">
-                    <button class="btn btn-primary">SIMPAN</button>
+                    <button class="btn btn-success">SIMPAN</button>
                 </div>
             </div>
         </div>
