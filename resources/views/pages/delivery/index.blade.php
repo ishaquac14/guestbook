@@ -4,7 +4,7 @@
 <div class="container">
         <div class="d-flex align-items-center justify-content-between mt-5">
             <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
-            <a href="{{ route('thanks') }}" class="btn btn-success">Kembali</a>
+            <a href="javascript:history.go(-1);" class="btn btn-primary">Kembali</a>
         </div>
         <div class="col-md-3 offset-md-9 mb-4">
             <form action="/book" class="d-flex ml-auto mt-2" method="GET">
@@ -24,8 +24,8 @@
                     <th>NO</th>
                     <th>NAMA</th>
                     <th>ASAL PERUSAHAAN</th>
-                    <th>DEPARTEMEN</th>
-                    <th>TUJUAN LOKASI</th>
+                    <th>PLAT KENDARAAN</th>
+                    <th>LOKASI TUJUAN</th>
                     <th>ACTION</th>
                 </tr>
             </thead>
@@ -36,8 +36,8 @@
                     <td class="align-middle">{{ $loop->iteration }}</td>
                     <td class="align-middle">{{ $delivery->nama }}</td>
                     <td class="align-middle">{{ $delivery->asal_perusahaan }}</td>
-                    <td class="align-middle">{{ $delivery->departemen }}</td>
-                    <td class="align-middle">{{ $delivery->tujuan_lokasi }}</td>
+                    <td class="align-middle">{{ strtoupper($delivery->plat_kendaraan) }}</td>
+                    <td class="align-middle">{{ $delivery->lokasi_tujuan }}</td>
                     <td class="align-middle">
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <a href="{{ route('delivery.show', $delivery->id) }}" class="btn btn-primary">Detail</a>

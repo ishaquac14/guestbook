@@ -5,6 +5,7 @@
     <div class="d-flex align-items-center justify-content-between mt-5">
         <a href="{{ route('thanks') }}">
             <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
+            <a href="javascript:history.go(-1);" class="btn btn-primary">Kembali</a>
         </a>
     </div>
     <div class="row mt-5">
@@ -14,7 +15,7 @@
         </div>
         <div class="col-md-6 mt-2">
             <label class="form-label">NAMA</label>
-            <input type="text" name="nama" class="form-control" placeholder="Nama" value="{{ $book->nama }}" readonly>
+            <input type="text" name="nama" class="form-control" placeholder="NAMA LENGKAP" value="{{ $book->nama }}" readonly>
         </div>
         <div class="col-md-6 mt-2">
             <label class="form-label">ASAL PERUSAHAAN</label>

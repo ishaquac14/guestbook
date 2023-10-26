@@ -5,6 +5,7 @@
     <div class="d-flex align-items-center justify-content-between mt-5 mb-5">
         <a href="{{ route('welcome') }}">
             <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
+            <a href="javascript:history.go(-1);" class="btn btn-primary">Kembali</a>
         </a>
     </div>
     <form action="{{ route('book.store') }}" method="POST">
@@ -14,23 +15,18 @@
                 <input type="text" class="form-control" name="nik" placeholder="NIK KTP/PASSPORT" required>
             </div>
             <div class="col-md-6 mt-4">
-                <input type="text" class="form-control" name="nama" placeholder="NAMA" required>
+                <input type="text" class="form-control" name="nama" placeholder="NAMA LENGKAP" required>
             </div>
             <div class="col-md-12 mt-4">
                 <input type="text" class="form-control" name="asal_perusahaan" placeholder="ASAL PERUSAHAAN" required>
             </div>
             <div class="col-md-4 mt-4">
-                <input type="text" class="form-control" name="nama_pic" placeholder="NAMA PIC" required>
+                <input type="text" class="form-control" name="nama_pic" placeholder="NAMA PIC YANG DITUJU" required>
             </div>
             <div class="col-md-4 mt-4">
-                <select name="departemen" class="form-select" id="DepartemenSelect" required>
-                    <option value="" disabled selected>Departemen</option>
+                <select name="departemen" class="form-select" id="DepartemenSelect" contenteditable="true" required>
+                    <option value="" disabled selected>--Departemen--</option>
                     <option value="Advisor">Advisor</option>
-                    <option value="DIV Engineering">DIV Engineering</option>
-                    <option value="DIV Engineering & Production Electric">DIV Engineering & Production Electric</option>
-                    <option value="DIV FAC & Purchasing">DIV FAC & Purchasing</option>
-                    <option value="DIV HRD IRL GA">DIV HRD IRL GA</option>
-                    <option value="DIV Production">DIV Production</option>
                     <option value="ENG & QA Electric Components">ENG & QA Electric Components</option>
                     <option value="Engineering Body">Engineering Body</option>
                     <option value="Engineering Unit">Engineering Unit</option>
@@ -52,11 +48,12 @@
                     <option value="Quality Body">Quality Body</option>
                     <option value="Quality Unit">Quality Unit</option>
                     <option value="Vice President Director">Vice President Director</option>
+                    <option value="Tidak Ada">--Tidak Ada--</option>
                 </select>
             </div>
             <div class="col-md-4 mt-4">
                 <select name="tujuan_lokasi" class="form-select" id="TujuanLokasiSelect" required>
-                    <option value="" disabled selected>Tujuan Lokasi</option>
+                    <option value="" disabled selected>--Tujuan Lokasi--</option>
                     <option value="Level 0 - Loker">Level 0 - Loker</option>
                     <option value="Level 0 - Parkiran Mobil">Level 0 - Parkiran Mobil</option>
                     <option value="Level 0 - Parkiran Motor">Level 0 - Parkiran Motor</option>

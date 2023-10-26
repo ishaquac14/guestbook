@@ -5,8 +5,8 @@
         <div class="d-flex align-items-center justify-content-between mt-5">
             <a href="{{ route('welcome') }}">
                 <img src="{{ asset('images/logo1.png') }}" alt="" height="25">
+                <a href="javascript:history.go(-1);" class="btn btn-primary">Kembali</a>
             </a>              
-            <a href="{{ route('thanks') }}" class="btn btn-warning">Kembali</a>
         </div>
         <div class="col-md-3 offset-md-9 mb-4">
             <form action="/book" class="d-flex ml-auto mt-2" method="GET">

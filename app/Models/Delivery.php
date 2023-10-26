@@ -13,9 +13,8 @@ class Delivery extends Model
         'nik',
         'nama',
         'asal_perusahaan',
-        'nama_pic',
-        'departemen',
-        'tujuan_lokasi',
-        'tujuan'   
+        'plat_kendaraan',
+        'lokasi_tujuan',
+        'keperluan'   
     ];
 }

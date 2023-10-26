@@ -10,10 +10,10 @@
             <a class="nav-link text-dark" href="{{ route('welcome') }}">BERANDA</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="{{ route('book.create') }}">TAMU</a>
+            <a class="nav-link text-dark" href="{{ route('book.index') }}">TAMU</a>
           </li>
           <li class="nav-item mx-3">
-            <a class="nav-link text-dark" href="{{ route('delivery.create') }}">DELIVERY</a>
+            <a class="nav-link text-dark" href="{{ route('delivery.index') }}">DELIVERY</a>
           </li>
         </ul>
       </div>

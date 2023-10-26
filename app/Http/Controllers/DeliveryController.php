@@ -19,8 +19,8 @@ class DeliveryController extends Controller
                 if ($searchTerm) {
                     $query->where('nama', 'LIKE', '%' . $searchTerm . '%')
                         ->orWhere('asal_perusahaan', 'LIKE', '%' . $searchTerm . '%')
-                        ->orWhere('departemen', 'LIKE', '%' . $searchTerm . '%')
-                        ->orWhere('tujuan_lokasi', 'LIKE', '%' . $searchTerm . '%');
+                        ->orWhere('plat_kendaraan', 'LIKE', '%' . $searchTerm . '%')
+                        ->orWhere('lokasi_tujuan', 'LIKE', '%' . $searchTerm . '%');
                 }
             })
             ->paginate(5);
@@ -46,10 +46,9 @@ class DeliveryController extends Controller
             'nik' => 'required|string',
             'nama' => 'required|string',
             'asal_perusahaan' => 'required|string',
-            'nama_pic' => 'required|string',
-            'departemen' => 'required|string',
-            'tujuan_lokasi' => 'required|string',
-            'tujuan' => 'required|string',
+            'plat_kendaraan' => 'required|string',
+            'lokasi_tujuan' => 'required|string',
+            'keperluan' => 'required|string',
         ]);
 
         // Simpan data buku ke dalam database
@@ -57,10 +56,9 @@ class DeliveryController extends Controller
             'nik' => $request->nik,
             'nama' => $request->nama,
             'asal_perusahaan' => $request->asal_perusahaan,
-            'nama_pic' => $request->nama_pic,
-            'departemen' => $request->departemen,
-            'tujuan_lokasi' => $request->tujuan_lokasi,
-            'tujuan' => $request->tujuan,
+            'plat_kendaraan' => $request->plat_kendaraan,
+            'lokasi_tujuan' => $request->lokasi_tujuan,
+            'keperluan' => $request->keperluan,
         ]);    
         
         return redirect()->route('thanks')->with('success', 'Data Sukses Ditambahkan');

@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('nik');
             $table->string('nama');
             $table->string('asal_perusahaan');
-            $table->string('nama_pic');
-            $table->string('departemen');
-            $table->string('tujuan_lokasi');
-            $table->text('tujuan');
+            $table->string('plat_kendaraan');
+            $table->string('lokasi_tujuan');
+            $table->text('keperluan');
             $table->timestamps();
         });
     }
