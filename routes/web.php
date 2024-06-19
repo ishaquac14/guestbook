@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\DeliveryController;
+Use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,7 @@ Route::get('/book/search', 'BookController@index');
 
 Route::resource('/delivery', DeliveryController::class);
 Route::get('/delivery/search', 'DeliveryController@index');
+Route::get('/master_users', 'UserController@index');
 
 
 Route::get('/thanks', function () {
